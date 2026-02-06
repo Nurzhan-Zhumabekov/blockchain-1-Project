@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Decentralized Charity Crowdfunding Platform
+        </title>
+
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <h1 id="heading">Decentralized Charity Crowdfunding Platform</h1>
+        <div class="wallet-container">
+            <h3>Connect wallet:</h3>
+            <button onclick="connectWallet()">Connect</button> 
+        </div>
+
+        <div id="walletContainer">
+            <div class="walletContainerP">
+                <p>Address: <span id="walletAddress">Not connected</span></p>
+            </div>
+            <div class="walletContainerP">
+                <p>Wallet: <span id="network">Not connected</span></p>
+            </div>
+            <div class="walletContainerP">
+                <p>ETH Balance: <span id="ethBalance">0</span></p>
+            </div>
+            <div class="walletContainerP">
+                <p>Token Balance: <span id="tokenBalance">0</span></p>
+            </div>
+        </div>
+
+        <div class="campaign-container">
+            <div id="createCampaign">
+                <h3>CREATE NEW CAMPAIGN</h3>
+                <label>Title of campaign:
+                    <input type="text" id="campaignTitle">
+                </label><br>
+
+                <label>Need to collect ___ ETH:
+                    <input type="number" id="campaignGoal">
+                </label><br>
+
+                <label>Must be collected within ___ days:
+                    <input type="number" id="campaignDuration">
+                </label><br>
+
+                <button onclick="createCampaign()">Create</button>
+            </div>
+
+            <div id="campaigList">
+                <h3>CAMPAIGN LIST:</h3>
+                <p>There are no campaigns</p>
+
+                <button onclick="loadCampaign()">Refresh</button>
+            </div>
+
+            <div id="contributeCampaign">
+                <h3>CONTRIBUTE CAMPAIGNS:</h3>
+                <label>Campaign ID:
+                    <input type="number" id="contributeCampaignID">
+                </label><br>
+
+                <label>Amount:
+                    <input type="number" id="contributeCampaignAmount">
+                </label><br>
+
+                <button onclick="contributeCampaign()">Contribute</button>
+            </div>
+
+            <div id="campaignInfo">
+                <h3>CAMPAIGNS INFORMATION:</h3>
+                <p>Total contributions: <span id="totalContributions">0</span></p>
+                <p>Total campaigns: <span id="totalCampaigns">0</span></p>
+
+                <button onclick="getCampaignInfo()">Refresh info</button>
+            </div>
+        </div>
+
+        <div id="transactionInfo">
+            <h3>TRANSACTION OUTCOMES:</h3>
+            <div id="transactionStatus"></div>
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+</html>

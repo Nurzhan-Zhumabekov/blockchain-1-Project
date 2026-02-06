@@ -1,0 +1,25 @@
+.wallet-container {
+    display: flex;
+    justify-content: center;
+}
+
+#walletContainer {
+    display: flex;
+    justify-content: center;
+}
+
+#heading {
+    display: flex;
+    justify-content: center;
+}
+
+.walletContainerP {
+    margin-right: 20px;
+}
+
+.campaign-container {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
