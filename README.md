@@ -61,8 +61,6 @@ blockchain-1-Project/
 ├─ README.md
 └─ .gitignore
 
----
-
 ## Screenshots and Demonstration
 
 ### Application Interface
